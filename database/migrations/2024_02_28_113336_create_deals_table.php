@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('deals', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('account_id')->constrained('organizations');
-            $table->foreignId('contact_id')->constrained('contacts');
+            // $table->foreignId('account_id')->constrained('organizations');
+            // $table->foreignId('contact_id')->constrained('contacts');
             $table->string('stage');
             $table->decimal('value', 10, 2);
             $table->decimal('probability', 5, 2);

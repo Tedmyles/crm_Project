@@ -18,7 +18,7 @@ return new class extends Migration
         $table->string('email')->unique();
         $table->string('phone');
         $table->string('job_title');
-        $table->foreignId('organization_id')->constrained();
+        // $table->foreignId('organization_id')->constrained();
         $table->timestamps();
         });
     }
