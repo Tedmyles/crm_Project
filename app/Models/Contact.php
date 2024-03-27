@@ -2,9 +2,24 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
 class Contact extends Model
 {
-    protected $fillable = ['first_name', 'last_name', 'email', 'phone', 'job_title', 'organization_id'];
+    use HasFactory;
+
+    protected $fillable = [
+        'first_name',
+        'last_name',
+        'email',
+        'phone',
+        'job_title',
+        'organization_id',
+    ];
+
+    public function organization()
+    {
+        return $this->belongsTo(Organization::class);
+    }
 }
